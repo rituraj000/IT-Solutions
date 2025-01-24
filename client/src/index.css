@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: dark;
+    background-color: var(--dark-color);
+    color: var(--bg-color);
+}
+
+:root{
+    --bg-color: #f4f3ff;
+    --btn-color: #646cff;
+    --dark-color: #050505;
+    --helper-color: #99b9ff;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* base style */
+
+body{
+    margin: 0;
+    min-width: 32rem;
+    min-height: 100vh;
+    
+}
+
+h1{
+    font-size: 5.4rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+p,li,label,input,textarea{
+    font-size: 1.8rem;
+    line-height: 1.56;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.06rem;
+}
+
+a{
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--btn-color);
+    text-decoration: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+
+/* REACT TOSTIFY CSS */
+.custom-toast {
+  font-family: "Atlas Grotesk Web",Arial, Helvetica, sans-serif;
+  font-size: 1.9rem;
+}
+
+
+/* layout Rule */
+
+.container{
+    max-width: 140rem;
+    padding: 4rem 2.4rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    gap: 6.4rem;
+}
+.grid-two-cols{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-four-cols{
+    grid-template-columns: repeat(4,1fr);
+}
+
+/* Module Rule / Reusable Component --like button is reusable */
+
+button{
+text-transform: capitalize;
+padding: 1rem 2.2rem;
+font-size: 1.7rem;
+font-weight: 500;
+background-color: var(--btn-color);
+border-radius: 0.8rem;
+border: 0.1rem solid transparent;
+cursor: pointer;
+letter-spacing: 0.1rem;
+transition: border-color 0.3s;
+}
+
+.secondary-btn{
+    background-color: transparent;
+    box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+    margin-left: 3.2rem;
+}
+
+      /* State Rule/ -- jb hover krre tho jo change hoga  */
+
+      button:hover{
+        box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+      }
+
+      a:hover{
+        color: #535bf2;
+      }
+      
+      /* Hero Section */
+
+      .section-hero .grid{
+        align-items: center;
+    }
+    
+    .hero-content p{
+        margin: 2.4rem 0 4.8rem 0;
+    }
+    
+    .hero-content:first-child{
+        margin: 0 0 1.2rem 0;
+    }
+    
+    .hero-image{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hero-image img{
+        width: 500;
+        height: 500;
+    }
+      /* End Hero */
+
+
+      /* Analytics Section */
+      .section-analytics {
+        margin: 9.6rem 0;
+    }
+    
+    .section-analytics .container {
+        background-color: #ffffff; /* Change to a light background color */
+        border-radius: 1rem;
+    }
+    
+    .section-analytics .grid {
+        color: #000000; /* Change to a dark text color */
+    }
+    
+    .section-analytics .div1 {
+        text-align: center;
+        padding-right: 10rem;
+        border-right: 0.2rem solid #ffffff; /* Change to match the new background color */
+        background-color: #ffffff;
+    }
+
+    .section-analytics .div1 h2{
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .section-analytics .div1 p{
+        background-color: #ffffff;
+        color: #000000;
+    }
+    
+    .section-analytics :last-child {
+        border: none;
+    }
+    
+    .section-analytics h2 {
+        font-size: 4.8rem;
+    }
+    
+    .section-analytics p {
+        text-transform: capitalize;
+    }
+    
+    
+      /* Analytics Section End */
+
+
+
+
+      /* Contact Styling */
+      .section-contact .contact-content {
+        padding: 0;
+      }
+
+      .section-contact .container .section-form input{
+        background-color: var(--bg-color);
+        color: var(--dark-color);      }
+
+      .section-contact .container .section-form textarea{
+        background-color: var(--bg-color);
+      }
+      
+      .section-contact h1 {
+        margin-bottom: 3.2rem;
+      }
+      
+      .section-contact .container {
+        padding-top: 3.2rem;
+      }
+      
+      .section-contact .contact-img {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      
+      .section-contact .contact-img img {
+        width: 50rem;
+        height: auto;
+      }
+      
+      .section-contact .section-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+      }
+      
+      .section-contact .section-form label {
+        display: block;
+        margin-bottom: 1.2rem;
+        text-transform: capitalize;
+      }
+      
+      .section-contact .section-form input,
+      .section-contact .section-form textarea {
+        width: 80%;
+        padding: 0.2rem 0.6rem;
+      }
+
+      .section-form{
+        width: 70rem;
+      }
+
+
+      /* Registration and login form style */
+
+      .section-registration {
+        padding: 0 3.2rem;
+      }
+      
+      .section-registration .container {
+        /* background-color: #fff; */
+        padding-top: 3.2rem;
+        align-items: center;
+      }
+
+      .section-registration .container .registration-form input{
+        background-color: var(--bg-color);
+        color: var(--dark-color);
+      }
+
+      .container .section-form textarea{
+        color: var(--dark-color);
+      }
+      
+      .section-registration .container img {
+        width: 50rem;
+        height: auto;
+      }
+      
+      .section-registration .registration-form label {
+        display: block;
+        margin: 2.4rem 0 0.8rem 0;
+        text-transform: capitalize;
+      }
+      
+      .section-registration .registration-form input {
+        width: 80%;
+        padding: 0.6rem 0.6rem;
+      }
+      
+      .section-registration .registration-form button {
+        margin-top: 3.2rem;
+      }
+      
+      .adminNav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .adminContainer {
+        display: grid;
+        padding-top: 0;
+        grid-template-columns: 1fr 3fr;
+      }
+      
+      .adminList {
+        flex-direction: column;
+        list-style-type: none;
+      }
+      
+      .adminList li {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+      }
+
+      .registration-form{
+        width: 70rem;
+      }
+
+      /*? state rules  */
+
+button:hover {
+    box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+    /* border: 0.2rem solid #fff; */
+  }
+  
+  a:hover,
+  a.active {
+    color: #535bf2;
+  }
+  
+  /* pseduo elements  */
+  .main-heading {
+    position: relative;
+    text-transform: capitalize;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: 0.5rem;
+      background-color: var(--btn-color);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover,
+    a.active {
+      color: #747bff;
+    }
+    button {
+      background-color: var(--btn-color);
+    }
+  }
+  
+  /* error page  */
+  #error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #error-page .content {
+    max-width: 70rem;
+    text-align: center;
+  }
+  .content h2.header {
+    font-size: 18vw;
+    line-height: 1em;
+    animation: animate 10s ease-in-out infinite;
+    background: -webkit-repeating-linear-gradient(
+      -60deg,
+      #71b7e6,
+      var(--btn-color),
+      #b98acc,
+      #ee8176,
+      #b98acc,
+      var(--btn-color),
+      #9b59b6
+    );
+    background-size: 500%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+    position: relative;
+    -webkit-animation: animate 10s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    25% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  .content h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  
+  .content .btns {
+    margin: 25px 0;
+    display: inline-flex;
+    justify-content: center;
+  }
+  .content .btns a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid var(--btn-color);
+    color: var(--btn-color);
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .content .btns a:hover {
+    background: var(--btn-color);
+    color: #fff;
+  }
+  
+  
+  /** -----------------------
+  ** services section css
+  ** -------------------------  */
+  
+  .section-services {
+    & .container:first-child {
+      padding: 0;
+    }
+margin-left: 4rem;
+margin-right: 4rem;
+margin-bottom: 4rem;
+margin-top: 4rem;
+
+    & .main-heading{
+      margin-top: -2rem;
+     margin-left: 50rem;
+      margin-bottom: 4rem;
+    }
+    & .grid-three-cols {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.2rem;
+    }
+  
+    & .card {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      border: 0.2rem solid var(--helper-color);
+  
+      & .card-img {
+        text-align: center;
+        & img {
+          width: 70%;
+          height: auto;
+          filter: drop-shadow(0 0 2rem 2rem #fff);
+          -webkit-filter: drop-shadow(0 0 2rem 2rem #fff);
+        }
+      }
+  
+      & .card-details {
+        padding: 2.4rem;
+  
+        & .grid p {
+          font-size: 1.4rem;
+        }
+  
+        & h2 {
+          font-size: 3.2rem;
+          margin: 1.2rem 0 2.4rem 0;
+        }
+      }
+    }
+  }
+  
+  /** -----------------------
+  ** media query section css
+  ** -------------------------  */
+  
+  @media (width <= 998px) {
+    .grid-two-cols {
+      grid-template-columns: 1fr;
+    }
+  
+    .section-services {
+      & .grid-three-cols {
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+      }
+    }
+  
+    .section-registration {
+      & .container {
+        & .reg-img img {
+          width: 60%;
+          height: auto;
+        }
+      }
+    }
+  }
+  
+  @media (width <= 798px) {
+    html {
+      font-size: 56.25%;
+    }
+  
+    .section-registration {
+      & .container {
+        & .reg-img img {
+          width: 50%;
+          height: auto;
+        }
+      }
+  
+      & .registration-form {
+        & input {
+          width: 100%;
+          padding: 0.6rem 0.6rem;
+        }
+      }
+    }
+  }
