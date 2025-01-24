@@ -12,7 +12,7 @@ const authMiddleware = require("./middlewares/auth-middleware");
 
 // Lets Tackle Cors
 const corsOptions = {
-  origin: "http://localhost:5173" || "https://it-solutions-five.vercel.app" ,
+  origin: "https://it-solutions-five.vercel.app" ,
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
